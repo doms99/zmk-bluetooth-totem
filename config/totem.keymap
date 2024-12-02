@@ -97,10 +97,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &hold_tap LS(Q) Q  &hold_tap LS(W) W  &hold_tap LS(E) E  &hold_tap LS(R) R       &hold_tap LS(T) T         &hold_tap LS(Y) Y  &hold_tap LS(U) U   &hold_tap LS(I) I          &hold_tap LS(O) O         &hold_tap LS(P) P
-         &mt LEFT_SHIFT A   &lt 2 S            &lt 3 D            &lt 4 F                 &hold_tap LS(G) G         &hold_tap LS(H) H  &mt LEFT_COMMAND J  &mt LEFT_ALT K             &mt LEFT_CONTROL L        &mt LEFT_SHIFT SEMICOLON
-&kp ESC  &hold_tap LS(Z) Z  &hold_tap LS(X) X  &hold_tap LS(C) C  &hold_tap LS(V) V       &hold_tap LS(B) B         &hold_tap LS(N) N  &hold_tap LS(M) M   &hold_tap LS(COMMA) COMMA  &hold_tap LS(DOT) PERIOD  &hold_tap LS(FSLH) SLASH  &hold_tap LS(SINGLE_QUOTE) SQT
-                                               &lt 1 TAB          &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE      &kp ENTER           &kp BSPC
+            &hold_tap LS(Q) Q  &hold_tap LS(W) W  &hold_tap LS(E) E  &hold_tap LS(R) R       &hold_tap LS(T) T         &hold_tap LS(Y) Y  &hold_tap LS(U) U   &hold_tap LS(I) I          &hold_tap LS(O) O         &hold_tap LS(P) P
+            &mt LEFT_SHIFT A   &lt 2 S            &lt 3 D            &lt 4 F                 &hold_tap LS(G) G         &hold_tap LS(H) H  &mt LEFT_COMMAND J  &mt LEFT_ALT K             &mt LEFT_CONTROL L        &mt LEFT_SHIFT SEMICOLON
+&kp ESCAPE  &hold_tap LS(Z) Z  &hold_tap LS(X) X  &hold_tap LS(C) C  &hold_tap LS(V) V       &hold_tap LS(B) B         &hold_tap LS(N) N  &hold_tap LS(M) M   &hold_tap LS(COMMA) COMMA  &hold_tap LS(DOT) PERIOD  &hold_tap LS(FSLH) SLASH  &hold_tap LS(SINGLE_QUOTE) SQT
+                                                  &lt 1 TAB          &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE      &kp ENTER           &kp BSPC
             >;
         };
 
