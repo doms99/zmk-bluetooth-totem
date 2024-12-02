@@ -46,6 +46,11 @@
             bindings = <&vscode_search>;
             key-positions = <21 22>;
         };
+
+        mission_control {
+            bindings = <&kt LC(UP_ARROW)>;
+            key-positions = <22 23 24>;
+        };
     };
 
     macros {
