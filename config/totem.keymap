@@ -121,28 +121,28 @@
 
         control_arrows {
             bindings = <
-       &none           &none  &none         &none             &none        &none          &none               &none               &none                &none
-       &kt LEFT_SHIFT  &none  &kt LEFT_ALT  &kt LEFT_COMMAND  &none        &none          &kt LC(LEFT_ARROW)  &kt LC(UP_ARROW)    &kt LC(RIGHT_ARROW)  &none
-&none  &none           &none  &none         &none             &none        &none          &none               &kt LC(DOWN_ARROW)  &none                &none  &none
-                              &kt TAB       &kt SPACE         &kt SPACE    &kt BACKSPACE  &kt ENTER           &none
+            &none           &none  &none         &none             &none            &none              &none               &none               &none                &none
+            &kt LEFT_SHIFT  &none  &kt LEFT_ALT  &kt LEFT_COMMAND  &none            &none              &kt LC(LEFT_ARROW)  &kt LC(UP_ARROW)    &kt LC(RIGHT_ARROW)  &none
+&kt ESCAPE  &none           &none  &none         &none             &none            &none              &none               &kt LC(DOWN_ARROW)  &none                &none  &none
+                                   &kt LC(TAB)   &kt LC(SPACE)     &kt LC(SPACE)    &kt LC(BACKSPACE)  &kt LC(ENTER)       &none
             >;
         };
 
         alt_arrows {
             bindings = <
-       &none           &none             &none    &none             &none        &none          &none               &none               &none                &none
-       &kt LEFT_SHIFT  &kt LEFT_CONTROL  &none    &kt LEFT_COMMAND  &none        &none          &kt LA(LEFT_ARROW)  &kt LA(UP_ARROW)    &kt LA(RIGHT_ARROW)  &none
-&none  &none           &none             &none    &none             &none        &none          &none               &kt LA(DOWN_ARROW)  &none                &none  &none
-                                         &kt TAB  &kt SPACE         &kt SPACE    &kt BACKSPACE  &kt ENTER           &none
+            &none           &none             &none        &none             &none            &none              &none               &none               &none                &none
+            &kt LEFT_SHIFT  &kt LEFT_CONTROL  &none        &kt LEFT_COMMAND  &none            &none              &kt LA(LEFT_ARROW)  &kt LA(UP_ARROW)    &kt LA(RIGHT_ARROW)  &none
+&kt ESCAPE  &none           &none             &none        &none             &none            &none              &none               &kt LA(DOWN_ARROW)  &none                &none  &none
+                                              &kt LA(TAB)  &kt LA(SPACE)     &kt LA(SPACE)    &kt LA(BACKSPACE)  &kt LA(ENTER)       &none
             >;
         };
 
         command_arrows {
             bindings = <
-       &none           &none             &none         &none      &none        &none          &none               &none               &none                &none
-       &kt LEFT_SHIFT  &kt LEFT_CONTROL  &kt LEFT_ALT  &none      &none        &none          &kt LG(LEFT_ARROW)  &kt LG(UP_ARROW)    &kt LG(RIGHT_ARROW)  &none
-&none  &none           &none             &none         &none      &none        &none          &none               &kt LG(DOWN_ARROW)  &none                &none  &none
-                                         &kt TAB       &kt SPACE  &kt SPACE    &kt BACKSPACE  &kt ENTER           &none
+            &none           &none             &none         &none          &none            &none              &none               &none               &none                &none
+            &kt LEFT_SHIFT  &kt LEFT_CONTROL  &kt LEFT_ALT  &none          &none            &none              &kt LG(LEFT_ARROW)  &kt LG(UP_ARROW)    &kt LG(RIGHT_ARROW)  &none
+&kt ESCAPE  &none           &none             &none         &none          &none            &none              &none               &kt LG(DOWN_ARROW)  &none                &none  &none
+                                              &kt LG(TAB)   &kt LG(SPACE)  &kt LG(SPACE)    &kt LG(BACKSPACE)  &kt LG(ENTER)       &none
             >;
         };
 
