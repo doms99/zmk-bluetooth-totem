@@ -86,6 +86,32 @@
             bindings = <&kp ESCAPE &kt LEFT_COMMAND &tog 6>;
             label = "APP_SWITCHER_CANCEL";
         };
+
+        shift: shift {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "SHIFT";
+        };
+    };
+
+    behaviors {
+        as_ht: autoshift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTOSHIFT_HOLD_TAP";
+            bindings = <&shift>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -110,7 +136,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q             &kp W    &kp E      &kp R                   &kp T                     &kp Y          &kp U               &kp I           &kp O               &kp P
+            &as_ht Q Q        &kp W    &kp E      &kp R                   &kp T                     &kp Y          &kp U               &kp I           &kp O               &kp P
             &mt LEFT_SHIFT A  &lt 1 S  &lt 2 D    &lt 3 F                 &kp G                     &kp H          &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_CONTROL L  &mt LEFT_SHIFT SEMICOLON
 &kp ESCAPE  &kp Z             &kp X    &kp C      &kp V                   &kp B                     &kp N          &kp M               &kp COMMA       &kp DOT             &kp FSLH                  &kp APOS
                                        &lt 5 TAB  &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &kp ENTER           &kp DELETE
