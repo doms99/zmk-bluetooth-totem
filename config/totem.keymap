@@ -136,10 +136,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &as_ht Q Q        &kp W    &kp E      &kp R                   &kp T                     &kp Y          &kp U               &kp I           &kp O               &kp P
-            &mt LEFT_SHIFT A  &lt 1 S  &lt 2 D    &lt 3 F                 &kp G                     &kp H          &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_CONTROL L  &mt LEFT_SHIFT SEMICOLON
-&kp ESCAPE  &kp Z             &kp X    &kp C      &kp V                   &kp B                     &kp N          &kp M               &kp COMMA       &kp DOT             &kp FSLH                  &kp APOS
-                                       &lt 5 TAB  &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &kp ENTER           &kp DELETE
+            &as_ht Q Q        &as_ht W W  &as_ht E E  &as_ht R R              &as_ht T T                &as_ht Y Y     &as_ht U U          &as_ht I I          &as_ht O O          &as_ht P P
+            &mt LEFT_SHIFT A  &lt 1 S     &lt 2 D     &lt 3 F                 &as_ht G G                &as_ht H H     &mt LEFT_COMMAND J  &mt LEFT_ALT K      &mt LEFT_CONTROL L  &mt LEFT_SHIFT SEMICOLON
+&kp ESCAPE  &as_ht Z Z        &as_ht X X  &as_ht C C  &as_ht V V              &as_ht B B                &as_ht N N     &as_ht M M          &as_ht COMMA COMMA  &as_ht DOT DOT      &as_ht FSLH FSLH          &as_ht SINGLE_QUOTE SINGLE_QUOTE
+                                          &lt 5 TAB   &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &kp ENTER           &kp DELETE
             >;
         };
 
@@ -172,10 +172,10 @@
 
         symbol_layer {
             bindings = <
-            &trans          &trans            &trans   &trans                  &trans                    &kp RBKT       &kp N1     &kp N2      &kp N3  &kp EQUAL
-            &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans   &trans                  &trans                    &kp LBKT       &kp N4     &kp N5      &kp N6  &kp N0
-&kp ESCAPE  &trans          &trans            &trans   &trans                  &trans                    &kp BSLH       &kp N7     &kp N8      &kp N9  &kp MINUS  &kp GRAVE
-                                              &kp TAB  &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &kp ENTER  &kp DELETE
+            &trans          &trans            &trans   &trans                  &trans                    &as_ht RBKT RIGHT_BRACKET  &as_ht NUMBER_1 NUMBER_1  &as_ht NUMBER_2 NUMBER_2  &as_ht NUMBER_3 NUMBER_3  &as_ht EQUAL EQUAL
+            &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans   &trans                  &trans                    &as_ht LBKT LEFT_BRACKET   &as_ht NUMBER_4 NUMBER_4  &as_ht NUMBER_5 NUMBER_5  &as_ht NUMBER_6 NUMBER_6  &as_ht NUMBER_0 NUMBER_0
+&kp ESCAPE  &trans          &trans            &trans   &trans                  &trans                    &as_ht BSLH BSLH           &as_ht NUMBER_7 NUMBER_7  &as_ht NUMBER_8 NUMBER_8  &as_ht NUMBER_9 NUMBER_9  &as_ht MINUS MINUS        &as_ht GRAVE GRAVE
+                                              &kp TAB  &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE              &kp ENTER                 &kp DELETE
             >;
         };
 
