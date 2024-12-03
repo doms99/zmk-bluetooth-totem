@@ -85,7 +85,7 @@
 
             bindings = <
             &kp Q    &kp W    &kp E      &kp R                   &kp T                     &kp Y          &kp U               &kp I           &kp O               &kp P
-            &lt 2 A  &lt 3 S  &lt 4 D    &lt 5 F                 &kt G                     &kt H          &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_CONTROL L  &mt LEFT_SHIFT SEMICOLON
+            &lt 2 A  &lt 3 S  &lt 4 D    &lt 5 F                 &kp G                     &kp H          &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_CONTROL L  &mt LEFT_SHIFT SEMICOLON
 &kp ESCAPE  &kp Z    &kp X    &kp C      &kp V                   &kp B                     &kp N          &kp M               &kp COMMA       &kp DOT             &kp FSLH                  &kp APOS
                               &lt 1 TAB  &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &kp ENTER           &kp BSPC
             >;
@@ -93,9 +93,9 @@
 
         media_controls {
             bindings = <
-       &none  &none  &none  &none  &none    &none  &kt C_BRIGHTNESS_INC  &kt C_NEXT        &kt C_VOLUME_UP    &none
-       &none  &none  &none  &none  &none    &none  &none                 &kt C_PLAY_PAUSE  &kt C_MUTE         &none
-&none  &none  &none  &none  &none  &none    &none  &kt C_BRIGHTNESS_DEC  &kt C_PREVIOUS    &kt C_VOLUME_DOWN  &none  &none
+       &none  &none  &none  &none  &none    &none  &kp C_BRIGHTNESS_INC  &kp C_NEXT        &kp C_VOLUME_UP    &none
+       &none  &none  &none  &none  &none    &none  &none                 &kp C_PLAY_PAUSE  &kp C_MUTE         &none
+&none  &none  &none  &none  &none  &none    &none  &kp C_BRIGHTNESS_DEC  &kp C_PREVIOUS    &kp C_VOLUME_DOWN  &none  &none
                      &none  &none  &none    &none  &none                 &none
             >;
         };
@@ -103,36 +103,36 @@
         shift_arrows {
             bindings = <
             &none  &none             &none         &none             &none            &none          &none               &none               &none                &none
-            &none  &kt LEFT_CONTROL  &kt LEFT_ALT  &kt LEFT_COMMAND  &none            &none          &kt LS(LEFT_ARROW)  &kt LS(UP_ARROW)    &kt LS(RIGHT_ARROW)  &none
-&kt ESCAPE  &none  &none             &none         &none             &none            &none          &none               &kt LS(DOWN_ARROW)  &none                &none  &none
-                                     &kt TAB       &kt SPACE         &kt LC(SPACE)    &kt BACKSPACE  &kt ENTER           &none
+            &none  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &none            &none          &kp LS(LEFT_ARROW)  &kp LS(UP_ARROW)    &kp LS(RIGHT_ARROW)  &none
+&kp ESCAPE  &none  &none             &none         &none             &none            &none          &none               &kp LS(DOWN_ARROW)  &none                &none  &none
+                                     &kp TAB       &kp SPACE         &kp LC(SPACE)    &kp BACKSPACE  &kp ENTER           &none
             >;
         };
 
         control_arrows {
             bindings = <
             &none           &none  &none         &none             &none            &none          &none           &none           &none            &none
-            &kt LEFT_SHIFT  &none  &kt LEFT_ALT  &kt LEFT_COMMAND  &none            &none          &kt LEFT_ARROW  &kt UP_ARROW    &kt RIGHT_ARROW  &none
-&kt ESCAPE  &none           &none  &none         &none             &none            &none          &none           &kt DOWN_ARROW  &none            &none  &none
-                                   &kt LC(TAB)   &kt LC(SPACE)     &kt LC(SPACE)    &kt BACKSPACE  &kt ENTER       &none
+            &kp LEFT_SHIFT  &none  &kp LEFT_ALT  &kp LEFT_COMMAND  &none            &none          &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &none
+&kp ESCAPE  &none           &none  &none         &none             &none            &none          &none           &kp DOWN_ARROW  &none            &none  &none
+                                   &kp LC(TAB)   &kp LC(SPACE)     &kp LC(SPACE)    &kp BACKSPACE  &kp ENTER       &none
             >;
         };
 
         alt_arrows {
             bindings = <
             &none           &none             &none        &none             &none            &none              &none               &none               &none                &none
-            &kt LEFT_SHIFT  &kt LEFT_CONTROL  &none        &kt LEFT_COMMAND  &none            &none              &kt LA(LEFT_ARROW)  &kt LA(UP_ARROW)    &kt LA(RIGHT_ARROW)  &none
-&kt ESCAPE  &none           &none             &none        &none             &none            &none              &none               &kt LA(DOWN_ARROW)  &none                &none  &none
-                                              &kt LA(TAB)  &kt LA(SPACE)     &kt LA(SPACE)    &kt LA(BACKSPACE)  &kt LA(ENTER)       &none
+            &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none        &kp LEFT_COMMAND  &none            &none              &kp LA(LEFT_ARROW)  &kp LA(UP_ARROW)    &kp LA(RIGHT_ARROW)  &none
+&kp ESCAPE  &none           &none             &none        &none             &none            &none              &none               &kp LA(DOWN_ARROW)  &none                &none  &none
+                                              &kp LA(TAB)  &kp LA(SPACE)     &kp LA(SPACE)    &kp LA(BACKSPACE)  &kp LA(ENTER)       &none
             >;
         };
 
         command_arrows {
             bindings = <
             &none           &none             &none         &none          &none            &none              &none               &none               &none                &none
-            &kt LEFT_SHIFT  &kt LEFT_CONTROL  &kt LEFT_ALT  &none          &none            &none              &kt LG(LEFT_ARROW)  &kt LG(UP_ARROW)    &kt LG(RIGHT_ARROW)  &none
-&kt ESCAPE  &none           &none             &none         &none          &none            &none              &none               &kt LG(DOWN_ARROW)  &none                &none  &none
-                                              &kt LG(TAB)   &kt LG(SPACE)  &kt LG(SPACE)    &kt LG(BACKSPACE)  &kt LG(ENTER)       &none
+            &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none          &none            &none              &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)  &none
+&kp ESCAPE  &none           &none             &none         &none          &none            &none              &none               &kp LG(DOWN_ARROW)  &none                &none  &none
+                                              &kp LG(TAB)   &kp LG(SPACE)  &kp LG(SPACE)    &kp LG(BACKSPACE)  &kp LG(ENTER)       &none
             >;
         };
 
@@ -141,7 +141,7 @@
         &trans  &trans  &trans   &trans     &trans       &kp RBKT       &kp N1     &kp N2  &kp N3  &kp EQUAL
         &trans  &trans  &trans   &trans     &trans       &kp LBKT       &kp N4     &kp N5  &kp N6  &kp N0
 &trans  &trans  &trans  &trans   &trans     &trans       &kp BSLH       &kp N7     &kp N8  &kp N9  &kp MINUS  &kp GRAVE
-                        &kt TAB  &kt SPACE  &kt SPACE    &kt BACKSPACE  &kt ENTER  &trans
+                        &kp TAB  &kp SPACE  &kp SPACE    &kp BACKSPACE  &kp ENTER  &trans
             >;
         };
     };
