@@ -38,7 +38,7 @@
         };
 
         symbol_layer {
-            bindings = <&mo 6>;
+            bindings = <&mo 4>;
             key-positions = <12 13>;
         };
 
@@ -48,8 +48,13 @@
         };
 
         mission_control {
-            bindings = <&kt LC(UP_ARROW)>;
+            bindings = <&kp LC(UP_ARROW)>;
             key-positions = <22 23 24>;
+        };
+
+        app_switcher {
+            bindings = <&app_switcher_open>;
+            key-positions = <27 28 29>;
         };
     };
 
@@ -59,6 +64,27 @@
             #binding-cells = <0>;
             bindings = <&kt LEFT_SHIFT &kp LEFT_SHIFT>;
             label = "VSCODE_SEARCH";
+        };
+
+        app_switcher_open: app_toggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_COMMAND &kp TAB &tog 6>;
+            label = "APP_TOGGLE";
+        };
+
+        app_switcher_select: app_switcher_select {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_COMMAND &tog 6>;
+            label = "APP_SWITCHER_SELECT";
+        };
+
+        app_switcher_cancel: app_switcher_cancel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kt LEFT_COMMAND &tog 6>;
+            label = "APP_SWITCHER_CANCEL";
         };
     };
 
@@ -84,28 +110,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q    &kp W    &kp E      &kp R                   &kp T                     &kp Y          &kp U               &kp I           &kp O               &kp P
-            &lt 2 A  &lt 3 S  &lt 4 D    &lt 5 F                 &kp G                     &kp H          &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_CONTROL L  &mt LEFT_SHIFT SEMICOLON
-&kp ESCAPE  &kp Z    &kp X    &kp C      &kp V                   &kp B                     &kp N          &kp M               &kp COMMA       &kp DOT             &kp FSLH                  &kp APOS
-                              &lt 1 TAB  &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &kp ENTER           &kp BSPC
-            >;
-        };
-
-        media_controls {
-            bindings = <
-       &none  &none  &none  &none  &none    &none  &kp C_BRIGHTNESS_INC  &kp C_NEXT        &kp C_VOLUME_UP    &none
-       &none  &none  &none  &none  &none    &none  &none                 &kp C_PLAY_PAUSE  &kp C_MUTE         &none
-&none  &none  &none  &none  &none  &none    &none  &kp C_BRIGHTNESS_DEC  &kp C_PREVIOUS    &kp C_VOLUME_DOWN  &none  &none
-                     &none  &none  &none    &none  &none                 &none
-            >;
-        };
-
-        shift_arrows {
-            bindings = <
-            &none  &none             &none         &none             &none            &none          &none               &none               &none                &none
-            &none  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &none            &none          &kp LS(LEFT_ARROW)  &kp LS(UP_ARROW)    &kp LS(RIGHT_ARROW)  &none
-&kp ESCAPE  &none  &none             &none         &none             &none            &none          &none               &kp LS(DOWN_ARROW)  &none                &none  &none
-                                     &kp TAB       &kp SPACE         &kp LC(SPACE)    &kp BACKSPACE  &kp ENTER           &none
+            &kp Q             &kp W    &kp E      &kp R                   &kp T                     &kp Y          &kp U               &kp I           &kp O               &kp P
+            &mt LEFT_SHIFT A  &lt 1 S  &lt 2 D    &lt 3 F                 &kp G                     &kp H          &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_CONTROL L  &mt LEFT_SHIFT SEMICOLON
+&kp ESCAPE  &kp Z             &kp X    &kp C      &kp V                   &kp B                     &kp N          &kp M               &kp COMMA       &kp DOT             &kp FSLH                  &kp APOS
+                                       &lt 5 TAB  &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &kp ENTER           &kp DELETE
             >;
         };
 
@@ -120,28 +128,46 @@
 
         alt_arrows {
             bindings = <
-            &none           &none             &none        &none             &none            &none              &none               &none               &none                &none
-            &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none        &kp LEFT_COMMAND  &none            &none              &kp LA(LEFT_ARROW)  &kp LA(UP_ARROW)    &kp LA(RIGHT_ARROW)  &none
-&kp ESCAPE  &none           &none             &none        &none             &none            &none              &none               &kp LA(DOWN_ARROW)  &none                &none  &none
-                                              &kp LA(TAB)  &kp LA(SPACE)     &kp LA(SPACE)    &kp LA(BACKSPACE)  &kp LA(ENTER)       &none
+            &none           &none             &none        &none             &none    &none              &none               &none               &none                &none
+            &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none        &kp LEFT_COMMAND  &none    &none              &kp LA(LEFT_ARROW)  &kp LA(UP_ARROW)    &kp LA(RIGHT_ARROW)  &none
+&kp ESCAPE  &none           &none             &none        &none             &none    &none              &none               &kp LA(DOWN_ARROW)  &none                &none  &none
+                                              &kp LA(TAB)  &kp LA(SPACE)     &none    &kp LA(BACKSPACE)  &kp ENTER           &kp LA(DELETE)
             >;
         };
 
         command_arrows {
             bindings = <
-            &none           &none             &none         &none          &none            &none              &none               &none               &none                &none
-            &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none          &none            &none              &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)  &none
-&kp ESCAPE  &none           &none             &none         &none          &none            &none              &none               &kp LG(DOWN_ARROW)  &none                &none  &none
-                                              &kp LG(TAB)   &kp LG(SPACE)  &kp LG(SPACE)    &kp LG(BACKSPACE)  &kp LG(ENTER)       &none
+            &none           &none             &none         &none          &none    &none              &none               &none               &none                &none
+            &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none          &none    &none              &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)  &none
+&kp ESCAPE  &none           &none             &none         &none          &none    &none              &none               &kp LG(DOWN_ARROW)  &none                &none  &none
+                                              &kp LG(TAB)   &kp LG(SPACE)  &none    &kp LG(BACKSPACE)  &kp ENTER           &kp LG(DELETE)
             >;
         };
 
         symbol_layer {
             bindings = <
-        &trans  &trans  &trans   &trans     &trans       &kp RBKT       &kp N1     &kp N2  &kp N3  &kp EQUAL
-        &trans  &trans  &trans   &trans     &trans       &kp LBKT       &kp N4     &kp N5  &kp N6  &kp N0
-&trans  &trans  &trans  &trans   &trans     &trans       &kp BSLH       &kp N7     &kp N8  &kp N9  &kp MINUS  &kp GRAVE
-                        &kp TAB  &kp SPACE  &kp SPACE    &kp BACKSPACE  &kp ENTER  &trans
+            &trans          &trans            &trans   &trans                  &trans                    &kp RBKT       &kp N1     &kp N2      &kp N3  &kp EQUAL
+            &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans   &trans                  &trans                    &kp LBKT       &kp N4     &kp N5      &kp N6  &kp N0
+&kp ESCAPE  &trans          &trans            &trans   &trans                  &trans                    &kp BSLH       &kp N7     &kp N8      &kp N9  &kp MINUS  &kp GRAVE
+                                              &kp TAB  &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &kp ENTER  &kp DELETE
+            >;
+        };
+
+        media_controls {
+            bindings = <
+       &none  &none  &none  &none  &none    &none  &kp C_BRIGHTNESS_INC  &kp C_NEXT        &kp C_VOLUME_UP    &none
+       &none  &none  &none  &none  &none    &none  &none                 &kp C_PLAY_PAUSE  &kp C_MUTE         &none
+&none  &none  &none  &none  &none  &none    &none  &kp C_BRIGHTNESS_DEC  &kp C_PREVIOUS    &kp C_VOLUME_DOWN  &none  &none
+                     &none  &none  &none    &none  &none                 &none
+            >;
+        };
+
+        app_switcher_layer {
+            bindings = <
+                      &none  &none  &none    &none  &none    &none  &none                 &none     &none      &none
+                      &none  &none  &none    &none  &none    &none  &kp LEFT              &kp DOWN  &kp RIGHT  &none
+&app_switcher_cancel  &none  &none  &none    &none  &none    &none  &none                 &kp DOWN  &none      &none  &none
+                                    &kp TAB  &none  &none    &none  &app_switcher_select  &none
             >;
         };
     };
