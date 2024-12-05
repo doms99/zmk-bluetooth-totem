@@ -172,10 +172,10 @@
 
         symbol_layer {
             bindings = <
-         &trans          &trans            &trans   &trans                  &trans                    &as_ht RBKT RIGHT_BRACKET  &as_ht NUMBER_1 NUMBER_1  &as_ht NUMBER_2 NUMBER_2  &as_ht NUMBER_3 NUMBER_3  &as_ht EQUAL EQUAL
-         &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans   &trans                  &trans                    &as_ht LBKT LEFT_BRACKET   &as_ht NUMBER_4 NUMBER_4  &as_ht NUMBER_5 NUMBER_5  &as_ht NUMBER_6 NUMBER_6  &as_ht NUMBER_0 NUMBER_0
-&kp ESC  &trans          &trans            &trans   &trans                  &trans                    &as_ht BSLH BSLH           &as_ht NUMBER_7 NUMBER_7  &as_ht NUMBER_8 NUMBER_8  &as_ht NUMBER_9 NUMBER_9  &as_ht MINUS MINUS        &as_ht GRAVE GRAVE
-                                           &kp TAB  &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE              &kp ENTER                 &kp DELETE
+         &trans          &trans            &trans     &trans                  &trans                     &as_ht RBKT RIGHT_BRACKET  &as_ht NUMBER_1 NUMBER_1  &as_ht NUMBER_2 NUMBER_2  &as_ht NUMBER_3 NUMBER_3  &as_ht EQUAL EQUAL
+         &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans     &trans                  &trans                     &as_ht LBKT LEFT_BRACKET   &as_ht NUMBER_4 NUMBER_4  &as_ht NUMBER_5 NUMBER_5  &as_ht NUMBER_6 NUMBER_6  &as_ht NUMBER_0 NUMBER_0
+&kp ESC  &trans          &trans            &trans     &trans                  &trans                     &as_ht BSLH BSLH           &as_ht NUMBER_7 NUMBER_7  &as_ht NUMBER_8 NUMBER_8  &as_ht NUMBER_9 NUMBER_9  &as_ht MINUS MINUS        &as_ht GRAVE GRAVE
+                                           &kp COMMA  &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL PERIOD    &kp BACKSPACE              &kp ENTER                 &kp DELETE
             >;
         };
 
