@@ -136,10 +136,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &as_ht Q Q        &as_ht W W  &as_ht E E  &as_ht R R              &as_ht T T                &as_ht Y Y     &as_ht U U          &as_ht I I          &as_ht O O          &as_ht P P
-            &mt LEFT_SHIFT A  &lt 1 S     &lt 2 D     &lt 3 F                 &as_ht G G                &as_ht H H     &mt LEFT_COMMAND J  &mt LEFT_ALT K      &mt LEFT_CONTROL L  &mt LEFT_SHIFT SEMICOLON
-&kp ESCAPE  &as_ht Z Z        &as_ht X X  &as_ht C C  &as_ht V V              &as_ht B B                &as_ht N N     &as_ht M M          &as_ht COMMA COMMA  &as_ht DOT DOT      &as_ht FSLH FSLH          &as_ht SINGLE_QUOTE SINGLE_QUOTE
-                                          &lt 5 TAB   &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &kp ENTER           &kp DELETE
+              &as_ht Q Q        &as_ht W W  &as_ht E E        &as_ht R R              &as_ht T T                &as_ht Y Y     &as_ht U U          &as_ht I I          &as_ht O O          &as_ht P P
+              &mt LEFT_SHIFT A  &lt 1 S     &lt 2 D           &lt 3 F                 &as_ht G G                &as_ht H H     &mt LEFT_COMMAND J  &mt LEFT_ALT K      &mt LEFT_CONTROL L  &mt LEFT_SHIFT SEMICOLON
+&lt 5 ESCAPE  &as_ht Z Z        &as_ht X X  &as_ht C C        &as_ht V V              &as_ht B B                &as_ht N N     &as_ht M M          &as_ht COMMA COMMA  &as_ht DOT DOT      &as_ht FSLH FSLH          &as_ht SINGLE_QUOTE SINGLE_QUOTE
+                                            &mt LEFT_ALT TAB  &mt LEFT_COMMAND SPACE  &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &kp ENTER           &kp DELETE
             >;
         };
 
