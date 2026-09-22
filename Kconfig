@@ -1,0 +1,20 @@
+config ZMK_BEHAVIOR_HOLD_TAP_LONG
+    bool
+    default y
+    depends on DT_HAS_ZMK_BEHAVIOR_HOLD_TAP_LONG_ENABLED
+
+if ZMK_BEHAVIOR_HOLD_TAP_LONG
+
+config ZMK_BEHAVIOR_HOLD_TAP_LONG_MAX_HELD
+    int "Hold Tap Long Max Held"
+    default 10
+    help
+      Max number of simultaneously held hold-tap-long keys
+
+config ZMK_BEHAVIOR_HOLD_TAP_LONG_MAX_CAPTURED_EVENTS
+    int "Hold Tap Long Max Captured Events"
+    default 40
+    help
+      Max number of captured system events while waiting to resolve hold-tap-long keys
+
+endif

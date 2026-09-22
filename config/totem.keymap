@@ -165,6 +165,18 @@
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
         };
+
+        mt_cap: mod_tap_cap {
+            compatible = "zmk,behavior-hold-tap-long";
+            // hold: modifier, tap: letter, long hold: capital letter
+            bindings = <&kp>, <&kp>, <&shift>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            long-hold-ms = <400>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {

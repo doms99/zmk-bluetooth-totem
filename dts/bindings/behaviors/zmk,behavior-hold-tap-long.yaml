@@ -1,0 +1,50 @@
+# Hold-tap with a third "long hold" stage.
+# bindings = <hold>, <tap>, <long-hold>; hold gets the first parameter,
+# tap and long-hold both get the second one.
+
+description: Hold or Tap behavior with a long-hold stage
+
+compatible: "zmk,behavior-hold-tap-long"
+
+include: two_param.yaml
+
+properties:
+  bindings:
+    type: phandles
+    required: true
+  tapping-term-ms:
+    type: int
+    required: true
+  long-hold-ms:
+    type: int
+    required: true
+    description: |
+      Time from key press after which, if no other key was pressed while holding,
+      the hold binding is released and the long-hold binding is pressed.
+  quick-tap-ms:
+    type: int
+    default: -1
+  require-prior-idle-ms:
+    type: int
+    default: -1
+  flavor:
+    type: string
+    required: false
+    default: "hold-preferred"
+    enum:
+      - "hold-preferred"
+      - "balanced"
+      - "tap-preferred"
+      - "tap-unless-interrupted"
+  hold-while-undecided:
+    type: boolean
+  hold-while-undecided-linger:
+    type: boolean
+  retro-tap:
+    type: boolean
+  hold-trigger-key-positions:
+    type: array
+    required: false
+    default: []
+  hold-trigger-on-release:
+    type: boolean
