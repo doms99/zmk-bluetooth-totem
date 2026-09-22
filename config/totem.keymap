@@ -124,6 +124,20 @@
             bindings = <&kp LC(LG(SPACE))>;
             label = "EMOJI";
         };
+
+        bt_sel_macro: bt_sel_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to2>, <&bt BT_SEL MACRO_PLACEHOLDER>;
+            label = "BT_SEL_MACRO";
+        };
+
+        bt_disc_macro: bt_disc_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to2>, <&bt BT_DISC MACRO_PLACEHOLDER>;
+            label = "BT_DISC_MACRO";
+        };
     };
 
     behaviors {
@@ -140,10 +154,10 @@
         bt_hold_tap: bt_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "BT_HOLD_TAP";
-            bindings = <&bt>, <&bt>;
+            bindings = <&bt_disc_macro>, <&bt_sel_macro>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
         };
     };
@@ -234,7 +248,7 @@
         Bluetooth {
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &bt BT_NXT    &trans        &trans        &trans        &trans
-        &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+        &trans  &trans  &trans  &trans  &trans    &bt_hold_tap 0 0  &bt_hold_tap 1 1  &bt_hold_tap 2 2  &bt_hold_tap 3 3  &bt_hold_tap 4 4
 &trans  &trans  &trans  &trans  &trans  &trans    &bt BT_PRV    &trans        &trans        &trans        &trans        &bt BT_CLR
                         &trans  &trans  &trans    &trans        &trans        &trans
             >;
